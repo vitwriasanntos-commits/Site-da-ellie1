@@ -1,1 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellie OS</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="stars"></div>
+    <div id="cursorTrail"></div>
+    <div class="floating alien">👽</div>
+    <div class="floating alien2">👾</div>
+    <div class="floating squirrel">🐿️</div>
+    <div class="floating squirrel2">✨</div>
+    <div class="floating ufo">🛸</div>
+
+    <div class="container">
+        <!-- HERO -->
+        <header class="hero">
+            <div class="xp-window profile-window">
+                <div class="window-bar">MY_BABY.PNG</div>
+                <div class="window-content profile-content">
+                    <img class="ellie-art" src="https://i.ibb.co/ccC9CsQp/IMG-3850.jpg" alt="Ellie">
+                </div>
+            </div>
+            <h1>ELLIE OS</h1>
+            <p class="subtitle">
+                Professional Girlfriend Edition<br>
+                Version 2.025
+            </p>
+        </header>
+
+        <!-- STATUS -->
+        <section class="xp-window">
+            <div class="window-bar">SYSTEM_STATUS.SYS</div>
+            <div class="window-content">
+                <p>❤️ Together since 10.02.2025</p>
+                <h2 id="contador"></h2>
+                <p class="status-line">Favorite Human: Vit</p>
+            </div>
+        </section>
+
+        <!-- FIRST CONTACT -->
+        <section class="xp-window">
+            <div class="window-bar">FIRST_CONTACT.LOG</div>
+            <div class="window-content">
+                <p>07.01</p>
+                <p>Foi aqui que eu tomei coragem.</p>
+                <p>E sem perceber comecei a gostar de você.</p>
+            </div>
+        </section>
+
+        <!-- FIRST DATE -->
+        <section class="xp-window">
+            <div class="window-bar">FIRST_DATE.EXE</div>
+            <div class="window-content">
+                <p>10.02</p>
+                <p>Duas garotas nervosas.</p>
+                <p>Tentando agir normalmente.</p>
+                <p>Falhando miseravelmente.</p>
+                <p>Graças a Deus.</p>
+            </div>
+        </section>
+
+        <!-- ELLIE DATABASE -->
+        <section class="xp-window">
+            <div class="window-bar">ELLIE_DATABASE.DAT</div>
+            <div class="window-content">
+                <div class="database">
+                    <p>NAME: Ellie</p>
+                    <p>RARITY: 🌟🌟🌟🌟🌟</p>
+                    <p>CLASS: Legendary Girlfriend</p>
+                    <p>HUG POWER: 999+</p>
+                    <p>FAVORITE HUMAN: Vitória</p>
+                    <p>STATUS: Loved</p>
+                </div>
+                <div class="facts">
+                    <span>☕ café</span>
+                    <span>🍫 chocolate branco</span>
+                    <span>🎵 beach house</span>
+                    <span>🦔 sonic</span>
+                    <span>📖 19 days</span>
+                    <span>🦁 madagascar</span>
+                    <span>👽 e.t.</span>
+                    <span>🌅 fins de tarde</span>
+                    <span>🐿️ esquilos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- BEACH DAY -->
+        <section class="xp-window">
+            <div class="window-bar">BEACH_DAY.LOG</div>
+            <div class="window-content">
+                <p>Água gelada.</p>
+                <p>Chuva inesperada.</p>
+                <p>Frio absurdo.</p>
+                <p>Abraço perfeito.</p>
+                <p class="quote">"Eu repetiria aquele dia mil vezes só para passar mais alguns minutos com você."</p>
+            </div>
+        </section>
+
+        <!-- POEMA -->
+        <section class="xp-window">
+            <div class="window-bar">POEM_01.TXT</div>
+            <div class="window-content">
+                <p>Você me lembra os fins de tarde.</p>
+                <p>Porque eu nunca quero que eles acabem.</p>
+            </div>
+        </section>
+
+        <!-- MEMORIES -->
+        <section class="xp-window memories">
+            <div class="window-bar">MEMORIES.ZIP</div>
+            <div class="window-content memories-grid">
+                <div class="photo-card">
+                    <div class="photo-header">IMG_001.JPG</div>
+                    <img class="memory" src="https://i.ibb.co/gF77qDYP/IMG-3834.jpg" alt="Memória 1">
+                </div>
+                <div class="photo-card">
+                    <div class="photo-header">IMG_002.JPG</div>
+                    <img class="memory" src="https://i.ibb.co/3yt1Vt12/IMG-3835.jpg" alt="Memória 2">
+                </div>
+            </div>
+        </section>
+
+        <!-- POEMA 2 -->
+        <section class="xp-window">
+            <div class="window-bar">POEM_02.TXT</div>
+            <div class="window-content">
+                <p>Se Beach House virasse pessoa,</p>
+                <p>Acho que seria você.</p>
+            </div>
+        </section>
+
+        <!-- CARTA -->
+        <section class="xp-window">
+            <div class="window-bar">LOVE_LETTER.EXE</div>
+            <div class="window-content">
+                <button onclick="openLetter()">OPEN FILE</button>
+            </div>
+        </section>
+
+        <!-- CARTA ABERTA -->
+        <div id="letter" class="letter">
+            <div class="window-bar">LOVE_LETTER.TXT</div>
+            <div class="letter-content">
+                <h2>Ellie,</h2>
+                <p>Eu poderia escrever sobre o nosso original primeiro encontro. Sobre a praia. Sobre as músicas. Sobre todas as coisas que me lembram você.</p>
+                <p>Mas a verdade é que nada disso é a melhor parte.</p>
+                <p>A melhor parte é simplesmente você.</p>
+                <p>É o jeito que você fala. O jeito que você ri. As pequenas coisas que talvez nem perceba que faz.</p>
+                <p>Porque foram justamente essas pequenas coisas que fizeram você se tornar alguém tão importante para mim.</p>
+                <p>Quando janeiro começou eu não fazia ideia do que aconteceria nos meses seguintes.</p>
+                <p>Não fazia ideia de que uma mensagem acabaria se transformando em algumas das minhas memórias favoritas.</p>
+                <p>Nem que eu encontraria alguém que consegue fazer qualquer lugar parecer mais leve apenas por estar lá.</p>
+                <p>Você virou parte dos meus dias de um jeito tão natural que às vezes parece impossível lembrar como era antes.</p>
+                <p>E acho que essa é uma das coisas mais bonitas sobre amar alguém.</p>
+                <p>De repente ela está em tudo.</p>
+                <p>Nas músicas. Nos fins de tarde. Nas coisas que me fazem sorrir sem motivo.</p>
+                <p>Você está em todas elas.</p>
+                <p>Obrigada por cada abraço. Por cada conversa. Por cada momento que virou lembrança.</p>
+                <p>E obrigada por ser você.</p>
+                <p>Feliz Dia dos Namorados, meu amor. Eu te amo. ❤️</p>
+                <p class="assinatura">✨ sua vi ✨</p>
+            </div>
+        </div>
+
+        <!-- FINAL -->
+        <footer class="ending">
+            <p id="finalText">SAVE FILE CREATED</p>
+            <p class="save-file">ellie_and_vitoria.forever</p>
+        </footer>
+    </div>
+
+    <script src="./script.js"></script>
+    <audio id="bgMusic" loop>
+        <source src="https://files.catbox.moe/f6wg4s.mp3" type="audio/mpeg">
+    </audio>
+    <button class="botao-musica" onclick="toggleMusic()">🎵 Pausar / Play</button>
+</body>
+</html>
 
